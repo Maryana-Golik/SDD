@@ -26,16 +26,15 @@ graph LR
   DeliveryService --> Client
 ```
 ---
-Part 2 — Sequence Diagram (25%)
-Scenario
-
+## Part 2 — Sequence Diagram (25%)
+### Scenario
 User A sends a message to User B who is offline.
 
-Task
-
+### Task
 Describe the interaction sequence in time, i.e., how the request to send a message from User A to User B (who is currently offline) is processed.
 
-Sequence Diagram
+### Sequence Diagram
+```mermaid
 sequenceDiagram
   participant A as User A
   participant Client
@@ -60,3 +59,6 @@ sequenceDiagram
   DeliveryService->>Queue: fetch message
   DeliveryService->>B: Deliver message
   B->>DeliveryService: Acknowledge message
+```
+
+---
