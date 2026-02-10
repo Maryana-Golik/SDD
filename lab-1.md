@@ -1,4 +1,5 @@
 Part 1
+```mermaid
 graph LR
   Client --> API
   API --> MessageService
@@ -6,3 +7,4 @@ graph LR
   MessageService --> Queue
   Queue --> DeliveryService
   DeliveryService --> Client
+
