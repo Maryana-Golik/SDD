@@ -25,6 +25,13 @@ graph LR
   Queue --> DeliveryService
   DeliveryService --> Client
 
+
+
+
+
+
+
+
 # Part 2 — Sequence Diagram (25%)
 
 ## Scenario
