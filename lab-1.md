@@ -80,3 +80,22 @@ stateDiagram-v2
 ```
 ---
 
+## Part 4 — ADR (Architecture Decision Record) (25%)
+# RFC: Message Delivery Strategy
+
+## Context
+Users can be online or offline when messages are sent.
+
+## Problem
+Messages must not be lost and delivery status must be reliable.
+
+## Proposed Solution
+Use asynchronous delivery with a queue and client acknowledgements. If a user is offline, the message will stay in the queue until the user is online, and then the system will attempt delivery.
+
+## Alternatives
+- Direct delivery only (rejected): Direct delivery would require clients to be online, which could result in message loss.
+- Client polling (considered): Polling was considered but discarded as inefficient compared to using a message queue.
+
+## Consequences
++ Reliable delivery even for offline users.
+- Increased system complexity due to queue management.
