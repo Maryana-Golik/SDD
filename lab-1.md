@@ -62,3 +62,21 @@ sequenceDiagram
 ```
 
 ---
+## Part 3 — State Diagram (20%)
+### Object
+`Message`
+
+### Task
+Describe the **message lifecycle**.
+```mermaid
+stateDiagram-v2
+  [*] --> Created
+  Created --> Sent
+  Sent --> Delivered
+  Delivered --> Read
+  Sent --> Failed
+  Failed --> Retried
+  Retried --> Sent
+```
+---
+
