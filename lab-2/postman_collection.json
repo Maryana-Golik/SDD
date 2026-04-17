@@ -1,0 +1,41 @@
+{
+	"info": {
+		"name": "Messenger TS Lab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Maryana\"\n}",
+					"options": { "raw": { "language": "json" } }
+				},
+				"url": { "raw": "http://localhost:3000/users" }
+			}
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"conversationId\": 1,\n    \"senderId\": 1,\n    \"text\": \"Hello from Postman!\"\n}",
+					"options": { "raw": { "language": "json" } }
+				},
+				"url": { "raw": "http://localhost:3000/messages" }
+			}
+		},
+		{
+			"name": "Get History",
+			"request": {
+				"method": "GET",
+				"url": { "raw": "http://localhost:3000/conversations/1/messages" }
+			}
+		}
+	]
+}
