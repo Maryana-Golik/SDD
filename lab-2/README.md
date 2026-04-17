@@ -37,11 +37,11 @@ Ensure you have Node.js installed. Run the following command in the project root
 Bash
 npm install
 2. Start the Server
-Use the TypeScript loader to run the server (adjust the port in main.ts if necessary, e.g., 3001):
+Use the TypeScript loader to run the server (adjust the port in main.ts if necessary, e.g., 3000):
 
 Bash
 node --loader ts-node/esm src/main.ts
-The API will be available at: http://localhost:3001
+The API will be available at: http://localhost:3000
 
 3. Running Integration Tests
 To verify the "Create User -> Send Message -> Get History" flow automatically:
